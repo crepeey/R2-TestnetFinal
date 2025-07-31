@@ -1,10 +1,14 @@
 {
   "name": "NT Exhaust - R2 Testnet Auto Bot",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "auto": "node auto-bot.js",
+    "starter": "node start-bot.js",
+    "dev": "node --watch auto-bot.js",
+    "check-claim": "node check-claim.js"
   },
   "author": "VinSenzo",
   "license": "ISC",
@@ -15,5 +19,15 @@
     "ethers": "^6.13.7",
     "figlet": "^1.8.0",
     "uuid": "^11.1.0"
-  }
+  },
+  "keywords": [
+    "r2",
+    "testnet",
+    "bot",
+    "automation",
+    "trading",
+    "faucet",
+    "swap"
+  ],
+  "description": "Automated R2 Testnet bot with faucet claiming and smart swapping functionality"
 }
