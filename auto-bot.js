@@ -476,8 +476,9 @@ process.on('SIGTERM', () => {
   process.exit(0);
 });
 
-// Start the automation
-if (require.main === module) {
+// ESM-safe main check
+const isMain = import.meta.url === `file://${process.argv[1]}`;
+if (isMain) {
   runAutomation().catch(error => {
     log(`❌ Fatal error: ${error.message}`, "error");
     process.exit(1);
